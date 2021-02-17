@@ -34,10 +34,10 @@
         <nav
           class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
         >
-          <a class="mr-5 hover:text-gray-900">Home</a>
-          <a class="mr-5 hover:text-gray-900">Courses</a>
-          <a class="mr-5 hover:text-gray-900">Highlights</a>
-          <a class="mr-5 hover:text-gray-900">Contact</a>
+          <button onclick="goToHome()" class="mr-5 outline-none focus:outline-none hover:text-gray-900">Home</button>
+          <button onclick="goToCourse()" class="mr-5 outline-none focus:outline-none hover:text-gray-900">Courses</button>
+          <button onclick="goToHighlights()" class="mr-5 outline-none focus:outline-none hover:text-gray-900">Highlights</button>
+          <button onclick="goToContact()" class="mr-5 outline-none focus:outline-none hover:text-gray-900">Contact</button>
         </nav>
         <button
           class="inline-flex items-center bg-green-500 border-0 py-1 px-3 focus:outline-none hover:bg-green-600 rounded text-white mt-4 md:mt-0"
@@ -90,6 +90,7 @@
               Pay and Register
             </button>
             <button
+              onclick="goToCourse()" 
               class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"
             >
               View Courses
@@ -99,7 +100,7 @@
       </div>
     </section>
 
-    <section class="text-gray-600 body-font">
+    <section class="text-gray-600 body-font" id="courses">
       <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-wrap w-full mb-20">
           <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
@@ -119,8 +120,8 @@
           <div class="xl:w-1/4 md:w-1/2 p-4">
             <div class="bg-gray-100 p-6 rounded-lg">
               <img
-                class="h-40 rounded w-full object-cover object-center mb-6"
-                src="https://dummyimage.com/720x400"
+                class="h-40 rounded w-full object-contain object-center mb-6"
+                src="assets/img/zumba.png"
                 alt="content"
               />
               <h3
@@ -132,16 +133,15 @@
                 Zumba
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                hexagon disrupt edison bulbche.
+                Zumba is an exercise fitness program created by Colombian dancer and choreographer Alberto "Beto" Pérez during the 1990s. Zumba is a trademark owned by Zumba Fitness, LLC.
               </p>
             </div>
           </div>
           <div class="xl:w-1/4 md:w-1/2 p-4">
             <div class="bg-gray-100 p-6 rounded-lg">
               <img
-                class="h-40 rounded w-full object-cover object-center mb-6"
-                src="https://dummyimage.com/721x401"
+                class="h-40 rounded w-full object-contain object-center mb-6"
+                src="assets/img/aerobics.png"
                 alt="content"
               />
               <h3
@@ -153,16 +153,15 @@
                 Aerobics
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                hexagon disrupt edison bulbche.
+                Aerobics is a form of physical exercise that combines rhythmic aerobic exercise with stretching and strength training routines with the goal of improving all elements of fitness
               </p>
             </div>
           </div>
           <div class="xl:w-1/4 md:w-1/2 p-4">
             <div class="bg-gray-100 p-6 rounded-lg">
               <img
-                class="h-40 rounded w-full object-cover object-center mb-6"
-                src="https://dummyimage.com/722x402"
+                class="h-40 rounded w-full object-contain object-center mb-6"
+                src="assets/img/dance.svg"
                 alt="content"
               />
               <h3
@@ -174,16 +173,15 @@
                 Dance
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                hexagon disrupt edison bulbche.
+                Dance is a performing art form consisting of purposefully selected sequences of human movement. This movement has aesthetic and symbolic value, and is acknowledged as dance.
               </p>
             </div>
           </div>
           <div class="xl:w-1/4 md:w-1/2 p-4">
             <div class="bg-gray-100 p-6 rounded-lg">
               <img
-                class="h-40 rounded w-full object-cover object-center mb-6"
-                src="https://dummyimage.com/723x403"
+                class="h-40 rounded w-full object-contain object-center mb-6"
+                src="assets/img/yoga_and_meditation.svg"
                 alt="content"
               />
               <h3
@@ -195,16 +193,15 @@
                 Yoga and Meditation
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                hexagon disrupt edison bulbche.
+                Yoga is a group of physical, mental, and spiritual practices or disciplines which originated in ancient India. Yoga is one of the six Āstika schools of Indian philosophical traditions.
               </p>
             </div>
           </div>
           <div class="xl:w-1/4 md:w-1/2 p-4">
             <div class="bg-gray-100 p-6 rounded-lg">
               <img
-                class="h-40 rounded w-full object-cover object-center mb-6"
-                src="https://dummyimage.com/723x403"
+                class="h-40 rounded w-full object-contain object-center mb-6"
+                src="assets/img/daily_diet_routine.svg"
                 alt="content"
               />
               <h3
@@ -216,16 +213,15 @@
                 Daily Diet Routine
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                hexagon disrupt edison bulbche.
+                A balanced diet gives your body the nutrients it needs to function correctly. To get the nutrition you need, most of your daily calories should come from: fresh fruits. fresh vegetables. whole grains.
               </p>
             </div>
           </div>
           <div class="xl:w-1/4 md:w-1/2 p-4">
             <div class="bg-gray-100 p-6 rounded-lg">
               <img
-                class="h-40 rounded w-full object-cover object-center mb-6"
-                src="https://dummyimage.com/723x403"
+                class="h-40 rounded w-full object-cotain object-center mb-6"
+                src="assets/img/healthy_lifestyle.svg"
                 alt="content"
               />
               <h3
@@ -237,16 +233,15 @@
                 Healthy Active Lifestyle
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                hexagon disrupt edison bulbche.
+                A healthy lifestyle is a way of living that lowers the risk of being seriously ill or dying early. Not all diseases are preventable, but a large proportion of deaths, particularly those from coronary heart disease and lung cancer, can be avoided.
               </p>
             </div>
           </div>
           <div class="xl:w-1/4 md:w-1/2 p-4">
             <div class="bg-gray-100 p-6 rounded-lg">
               <img
-                class="h-40 rounded w-full object-cover object-center mb-6"
-                src="https://dummyimage.com/723x403"
+                class="h-40 rounded w-full object-cotain object-center mb-6"
+                src="assets/img/life_changing_program.svg"
                 alt="content"
               />
               <h3
@@ -258,8 +253,7 @@
                 Life Changing Program
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                hexagon disrupt edison bulbche.
+                The ‘Breakthroughs’ that one derives is nothing short of a miracle. The intention of the program is to help you lead an extraordinary life, a life of endless possibilities.
               </p>
             </div>
           </div>
@@ -267,7 +261,7 @@
       </div>
     </section>
 
-    <section class="text-gray-600 body-font">
+    <section class="text-gray-600 body-font" id="highlights">
       <div class="container px-5 py-24 mx-auto">
         <div
           class="flex flex-wrap w-full mb-20 flex-col items-center text-center"
@@ -304,8 +298,7 @@
                 Home Decor
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waist co, subway tile
-                poke farm.
+                ComingSoon
               </p>
             </div>
           </div>
@@ -334,8 +327,7 @@
                 Beauty Parlour tips and tricks
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waist co, subway tile
-                poke farm.
+                ComingSoon
               </p>
             </div>
           </div>
@@ -361,8 +353,7 @@
                 Fashion Designing
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waist co, subway tile
-                poke farm.
+                ComingSoon
               </p>
             </div>
           </div>
@@ -389,8 +380,7 @@
                 Cooking
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waist co, subway tile
-                poke farm.
+                ComingSoon
               </p>
             </div>
           </div>
@@ -415,8 +405,7 @@
                 Healthy and Fitness
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waist co, subway tile
-                poke farm.
+                ComingSoon
               </p>
             </div>
           </div>
@@ -441,8 +430,7 @@
                 Personality Development
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waist co, subway tile
-                poke farm.
+                ComingSoon
               </p>
             </div>
           </div>
@@ -469,8 +457,7 @@
                 Skills to business
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waist co, subway tile
-                poke farm.
+                ComingSoon
               </p>
             </div>
           </div>
@@ -495,8 +482,7 @@
                 Social media expert
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waist co, subway tile
-                poke farm.
+                ComingSoon
               </p>
             </div>
           </div>
@@ -521,8 +507,7 @@
                 Money Management and saving tips
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waist co, subway tile
-                poke farm.
+                ComingSoon
               </p>
             </div>
           </div>
@@ -547,8 +532,7 @@
                 Online Services
               </h2>
               <p class="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waist co, subway tile
-                poke farm.
+                ComingSoon
               </p>
             </div>
           </div>
@@ -560,7 +544,7 @@
         </button>
       </div>
     </section>
-    <section class="text-gray-600 body-font relative">
+    <section class="text-gray-600 body-font relative" id="contact">
       <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
         <div
           class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
@@ -610,7 +594,7 @@
             Feedback
           </h2>
           <p class="leading-relaxed mb-5 text-gray-600">
-            React us out by filling this form
+            Reach us out by filling this form
           </p>
           <div class="relative mb-4">
             <label for="name" class="leading-7 text-sm text-gray-600"
@@ -757,5 +741,6 @@
         </span>
       </div>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>
